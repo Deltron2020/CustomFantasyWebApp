@@ -7,7 +7,7 @@ stats = client.players_season_totals(season_end_year=2024)
 df = pd.DataFrame.from_dict(stats)
 
 print(df.columns)
-
+print('testing!')
 print(df
         .filter(['name','points'])
       .query("name.str.find('Kevin')>=0")
