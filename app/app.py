@@ -8,14 +8,20 @@ stats = client.players_season_totals(season_end_year=2024)
 df = pd.DataFrame.from_dict(stats)
 #print(df.columns)
 
-print(df
-        .filter(['name','points'])
-      .query("name.str.find('Kevin')>=0")
-      .head(10)
-      )
+players = (df
+            .filter(['name','points'])
+            .query("name.str.find('Smith')>=0")
+            .head(10)
+            ).to_dict()
+
 
 app = Flask(__name__)
 
 @app.route("/")
 def web_app_home():
-    return render_template()
+    return render_template('FA_Home.html', dataframe=players)
+
+
+print(__name__)
+if __name__ == "__main__":
+    app.run('0.0.0.0', debug=True)
