@@ -6,19 +6,27 @@ from flask import Flask, render_template, request
 stats = client.players_season_totals(season_end_year=2024)
 
 df = pd.DataFrame.from_dict(stats)
+df.insert(2,"name_lower", df['name'].str.lower(), True)
 #print(df.columns)
-
-players = (df
-            .filter(['name','points'])
-            .query("name.str.find('Smith')>=0")
-            .head(10)
-            ).to_dict()
-
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def web_app_home():
+    data = request.args
+    player = {'PlayerSearch': ''}
+    for i in data:
+        if (len(data[i])) > 0:
+            value = {i: data[i]}
+            player.update(value)
+            break
+
+    players = (df
+               .filter(['name', 'name_lower', 'points', 'positions', 'age', 'team'])
+               .query(f"name_lower.str.find('{player['PlayerSearch'].lower()}')>=0")
+               #.head(10)
+               ).to_dict()
+
     return render_template('FA_Home.html', dataframe=players)
 
 
