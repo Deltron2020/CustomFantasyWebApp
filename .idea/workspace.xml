@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0bc5a2a-7ffb-432b-baeb-b986e5c1415c" name="Changes" comment="app is up and running with player search working from a pandas dataframe and minor cosmetic improvements">
+    <list default="true" id="d0bc5a2a-7ffb-432b-baeb-b986e5c1415c" name="Changes" comment="minor changes to table">
+      <change afterPath="$PROJECT_DIR$/app/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/sidebars.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/sidebars.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/FA_Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/FA_Home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/Sidebar_Body.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/Sidebar_Body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/bootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/bootstrap.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711650355654</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="minor changes to table">
+      <option name="closed" value="true" />
+      <created>1711657385657</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711657385657</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -148,6 +160,7 @@
     <MESSAGE value="Syncing test" />
     <MESSAGE value="basic starter work" />
     <MESSAGE value="app is up and running with player search working from a pandas dataframe and minor cosmetic improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="app is up and running with player search working from a pandas dataframe and minor cosmetic improvements" />
+    <MESSAGE value="minor changes to table" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes to table" />
   </component>
 </project>
