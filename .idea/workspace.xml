@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0bc5a2a-7ffb-432b-baeb-b986e5c1415c" name="Changes" comment="added home template">
+    <list default="true" id="d0bc5a2a-7ffb-432b-baeb-b986e5c1415c" name="Changes" comment="minor changes to table">
+      <change afterPath="$PROJECT_DIR$/app/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/sidebars.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/sidebars.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/FA_Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/FA_Home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/Sidebar_Body.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/Sidebar_Body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/bootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/bootstrap.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,21 +45,48 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/tyler/Projects/CustomFantasyWebApp/app",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
-  },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-    ]
+    "last_opened_file_path": "U:/IT/4- Scripts/Python/Projects/CustomFantasyWebApp",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp" />
       <recent name="C:\Users\tyler\Projects\CustomFantasyWebApp\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp\app" />
+      <recent name="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp" />
       <recent name="C:\Users\tyler\Projects\CustomFantasyWebApp" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CustomFantasyWebApp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -80,38 +112,55 @@
       <option name="project" value="LOCAL" />
       <updated>1711550067724</updated>
     </task>
-    <task id="LOCAL-00002" summary="testing">
+    <task id="LOCAL-00002" summary="Syncing test">
       <option name="closed" value="true" />
-      <created>1711550239341</created>
+      <created>1711552251177</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1711550239341</updated>
+      <updated>1711552251177</updated>
     </task>
-    <task id="LOCAL-00003" summary="removed testing">
+    <task id="LOCAL-00003" summary="basic starter work">
       <option name="closed" value="true" />
-      <created>1711550595537</created>
+      <created>1711570563077</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1711550595537</updated>
+      <updated>1711570563077</updated>
     </task>
-    <task id="LOCAL-00004" summary="added home template">
+    <task id="LOCAL-00004" summary="app is up and running with player search working from a pandas dataframe and minor cosmetic improvements">
       <option name="closed" value="true" />
-      <created>1711552322267</created>
+      <created>1711650254133</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1711552322267</updated>
+      <updated>1711650254133</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="app is up and running with player search working from a pandas dataframe and minor cosmetic improvements">
+      <option name="closed" value="true" />
+      <created>1711650355654</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711650355654</updated>
+    </task>
+    <task id="LOCAL-00006" summary="minor changes to table">
+      <option name="closed" value="true" />
+      <created>1711657385657</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711657385657</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <MESSAGE value="testing" />
-    <MESSAGE value="removed testing" />
-    <MESSAGE value="added home template" />
-    <option name="LAST_COMMIT_MESSAGE" value="added home template" />
+    <MESSAGE value="Syncing test" />
+    <MESSAGE value="basic starter work" />
+    <MESSAGE value="app is up and running with player search working from a pandas dataframe and minor cosmetic improvements" />
+    <MESSAGE value="minor changes to table" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes to table" />
   </component>
 </project>
