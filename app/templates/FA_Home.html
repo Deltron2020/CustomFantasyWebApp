@@ -3,43 +3,60 @@
 <head>
     {% include 'bootstrap.html' %}
 
-    <title>Player Stats</title>
+    <title>Stats Champion</title>
 
+
+    <style>
+        .container-fluid,
+        .container {
+        background-color: #143454;
+    }
+    </style>
+
+    {% include 'header.html' %}
 
 </head>
 
-<body lang="en" data-bs-theme="dark" style="--bs-body-bg: #143454;">
+<body lang="en" data-bs-theme="dark">
 
-            <div class="container">
-                <div class="row">
-
-                    <div class="col mt-4 text-center">
-                        <label for="PlayerSearch" class="form-label" style="font-size:25px;"><b>Player Search</b></label>
+            <div class="container rounded-3 border shadow-lg">
+                <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center text-left">
+                  <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                    <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Welcome to Stat Champ!</h1>
+                    <p class="lead">Your #1 Fantasy Basketball App! View player stats, build a team, or join a league and find out if you have what it takes to be a stats champion!</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                      <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Create League</button>
+                      <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Build Team</button>
                     </div>
-
+                  </div>
+                  <div class="col-4 offset-1 mb-4">
+                      <img class="border rounded-3 text-center" src="/static/logo2.png" alt="" width="340" height="auto" align="center">
+                  </div>
                 </div>
+              </div>
 
-                <form autocomplete="off">
+
+            <div class="container rounded-3 border shadow-lg mt-4 mb-4">
+                <div class="row">
+                    <div class="col mt-4 text-center">
+                        <label for="PlayerSearch" class="form-label" style="font-size:35px;"><b>Player Search</b></label>
+                    </div>
+                </div>
+                <form autocomplete="off" action="#PlayerSearch" id="player-search">
                     <div class="row mb-2 mt-2 gx-2">
-
                         <div class="offset-4 col-4 text-center">
                                 <input class="form-control text-center" id="PlayerSearch" name="PlayerSearch" type="text" style="line-height: 25px;">
                         </div>
-
-
                         <div class="col">
                                 <input class="btn btn-lg fw-bold" type="submit" style="--bs-btn-bg: #eee; --bs-btn-color: #000; --bs-btn-border-color: #000; --bs-btn-hover-color: #000; --bs-btn-hover-bg: #7BCCEE; --bs-btn-line-height: 20px; ">
                                 </input>
                         </div>
-
                     </div>
                 </form>
-            </div>
 
-            <div class="container">
 
-                <div class="row">
-                  <div class="col-12 mt-5 mx-auto table_outer">
+                <div class="row mb-2">
+                  <div class="col-12 mt-5 mx-auto table_outer table-responsive">
                     <table class="table table-default table-striped table-hover" id="player_table">
                       <thead>
                       <tr>
@@ -66,7 +83,84 @@
                       </tbody>
 
                     </table>
+
+
                   </div>
+                </div>
+            </div>
+
+
+            <div class ="container rounded-3 border shadow-lg mt-4 mb-4">
+                <div class="row">
+                    <div class="col-6">
+
+                    <canvas id="pointsChart"></canvas>
+
+                        <script>
+                              const ctx = document.getElementById('pointsChart');
+                              const pointsNames = {{ top5points_names | safe}};
+                              const points = {{ top5points | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    pointsNames,
+                                  datasets: [{
+                                    label: 'Season Points Leaders',
+                                    data: points,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+
+                    <div class="col-6">
+
+                    <canvas id="blocksChart"></canvas>
+
+                        <script>
+                              const btx = document.getElementById('blocksChart');
+                              const blocksNames = {{ top5blocks_names | safe}};
+                              const blocks = {{ top5blocks | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(btx, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    blocksNames,
+                                  datasets: [{
+                                    label: 'Season Blocks Leaders',
+                                    data: blocks,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
                 </div>
             </div>
 

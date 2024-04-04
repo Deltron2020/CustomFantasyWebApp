@@ -27,7 +27,30 @@ def web_app_home():
                #.head(10)
                ).to_dict()
 
-    return render_template('FA_Home.html', dataframe=players)
+    top5points = (df
+               .filter(['name', 'points'])
+               .sort_values(['points'], ascending=False)
+               .head(5)
+               ).to_dict()
+
+    pointsNamesList = list(top5points['name'].values())
+    pointsPointsList = list(top5points['points'].values())
+
+    top5blocks = (df
+               .filter(['name', 'blocks'])
+               .sort_values(['blocks'], ascending=False)
+               .head(5)
+               ).to_dict()
+
+    blocksNamesList = list(top5blocks['name'].values())
+    blocksBlocksList = list(top5blocks['blocks'].values())
+
+    #print(players)
+
+    return render_template('FA_Home.html',
+                           dataframe=players,
+                           top5points=pointsPointsList, top5points_names=pointsNamesList,
+                           top5blocks=blocksBlocksList, top5blocks_names=blocksNamesList)
 
 
 print(__name__)
