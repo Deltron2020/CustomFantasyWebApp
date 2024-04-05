@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0bc5a2a-7ffb-432b-baeb-b986e5c1415c" name="Changes" comment="removed sidebar for now, changed theme to dark &amp; added JS data capture from HTML table">
-      <change afterPath="$PROJECT_DIR$/app/static/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CustomFantasyWebApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CustomFantasyWebApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d0bc5a2a-7ffb-432b-baeb-b986e5c1415c" name="Changes" comment="changed formatting, added example charts and images, added header and footer">
+      <change afterPath="$PROJECT_DIR$/app/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/FA_Signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/sidebars.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/sidebars.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/FA_Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/FA_Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/Sidebar_Body.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/Sidebar_Head.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/bootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/bootstrap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,26 +40,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.app.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "U:/IT/4- Scripts/Python/Projects/CustomFantasyWebApp",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;U:/IT/4- Scripts/Python/Projects/CustomFantasyWebApp&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp" />
       <recent name="C:\Users\tyler\Projects\CustomFantasyWebApp\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp\app" />
       <recent name="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp" />
+      <recent name="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp\app" />
       <recent name="C:\Users\tyler\Projects\CustomFantasyWebApp" />
     </key>
   </component>
@@ -81,7 +76,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/app.py" />
+      <option name="SCRIPT_NAME" value="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp\app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712088664981</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="changed formatting, added example charts and images, added header and footer">
+      <option name="closed" value="true" />
+      <created>1712262423804</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712262423804</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -178,6 +181,7 @@
     <MESSAGE value="app is up and running with player search working from a pandas dataframe and minor cosmetic improvements" />
     <MESSAGE value="minor changes to table" />
     <MESSAGE value="removed sidebar for now, changed theme to dark &amp; added JS data capture from HTML table" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed sidebar for now, changed theme to dark &amp; added JS data capture from HTML table" />
+    <MESSAGE value="changed formatting, added example charts and images, added header and footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed formatting, added example charts and images, added header and footer" />
   </component>
 </project>

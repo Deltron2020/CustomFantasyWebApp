@@ -1,15 +1,36 @@
-<div class="container-fluid">
+<div class="container-fluid" id="header">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <span class="fs-4"><b>The Fantasy Basketball Web App</b></span>
       </a>
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="/" class="nav-link" aria-current="true">Home</a></li>
+        <li class="nav-item"><a href="/auth/sign-up" class="nav-link" aria-current="false">Login</a></li>
+        <li class="nav-item"><a href="/test" class="nav-link" aria-current="false">FAQs</a></li>
+        <li class="nav-item"><a href="/test" class="nav-link" aria-current="false">About</a></li>
       </ul>
+
+
+      <script>
+        // Get the container element & nav items
+        // come back to do this for aria-current - setting active page to true
+        var navContainer = document.getElementById("header");
+        var navItems = navContainer.getElementsByClassName("nav-link");
+        var i = 0;
+
+        // Loop through the items
+        while (navItems[i]) {
+
+            if (navItems[i].href === document.URL) {
+              navItems[i].className = navItems[i].className.replace("nav-link", "nav-link active");
+              }
+            else {
+                navItems[i].className = "nav-link";
+            }
+            i++;
+        }
+      </script>
+
     </header>
   </div>
