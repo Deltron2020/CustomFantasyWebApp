@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        {% include 'bootstrap.html' %}
+
+    {% include 'bootstrap.html' %}
 
     <title>Sign Up</title>
 
@@ -14,13 +15,13 @@
 
     {% include 'header.html' %}
 
-
 </head>
 <body lang="en" data-bs-theme="dark">
 
+{% include 'messages.html' %}
 
 <div class="container rounded-3 border shadow-lg mb-4 py-4">
-    <form>
+    <form method="POST" name="signupForm">
         <img class="mb-4" src="/static/logo.png" alt="" width="100" height="auto">
         <h1 class="h3 mb-3 fw-bold">Sign Up</h1>
 
