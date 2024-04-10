@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0bc5a2a-7ffb-432b-baeb-b986e5c1415c" name="Changes" comment="added logo &amp; changed color">
+    <list default="true" id="d0bc5a2a-7ffb-432b-baeb-b986e5c1415c" name="Changes" comment="major changes - added login page, redesign home page, working on routes and backend">
+      <change afterPath="$PROJECT_DIR$/app/templates/FA_Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/FA_Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/FA_Home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/FA_Signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/FA_Signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,15 +57,14 @@
       <recent name="C:\Users\tyler\Projects\CustomFantasyWebApp\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp\app" />
       <recent name="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp" />
+      <recent name="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp\app" />
       <recent name="C:\Users\tyler\Projects\CustomFantasyWebApp" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CustomFantasyWebApp" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -69,7 +75,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/app.py" />
+      <option name="SCRIPT_NAME" value="U:\IT\4- Scripts\Python\Projects\CustomFantasyWebApp\app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,15 +154,31 @@
       <option name="project" value="LOCAL" />
       <updated>1711657385657</updated>
     </task>
-    <task id="LOCAL-00007" summary="added logo &amp; changed color">
+    <task id="LOCAL-00007" summary="removed sidebar for now, changed theme to dark &amp; added JS data capture from HTML table">
       <option name="closed" value="true" />
-      <created>1712232261944</created>
+      <created>1712088664981</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1712232261944</updated>
+      <updated>1712088664981</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="changed formatting, added example charts and images, added header and footer">
+      <option name="closed" value="true" />
+      <created>1712262423804</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712262423804</updated>
+    </task>
+    <task id="LOCAL-00009" summary="major changes - added login page, redesign home page, working on routes and backend">
+      <option name="closed" value="true" />
+      <created>1712351688309</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712351688309</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -165,7 +187,9 @@
     <MESSAGE value="basic starter work" />
     <MESSAGE value="app is up and running with player search working from a pandas dataframe and minor cosmetic improvements" />
     <MESSAGE value="minor changes to table" />
-    <MESSAGE value="added logo &amp; changed color" />
-    <option name="LAST_COMMIT_MESSAGE" value="added logo &amp; changed color" />
+    <MESSAGE value="removed sidebar for now, changed theme to dark &amp; added JS data capture from HTML table" />
+    <MESSAGE value="changed formatting, added example charts and images, added header and footer" />
+    <MESSAGE value="major changes - added login page, redesign home page, working on routes and backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="major changes - added login page, redesign home page, working on routes and backend" />
   </component>
 </project>

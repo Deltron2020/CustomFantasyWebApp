@@ -3,43 +3,160 @@
 <head>
     {% include 'bootstrap.html' %}
 
-    <title>Player Stats</title>
+    <title>Stats Champion</title>
 
+    <style>
+        .container-fluid,
+        .container {
+        background-color: #143454;
+    }
+    </style>
+
+    {% include 'header.html' %}
 
 </head>
 
-<body lang="en" data-bs-theme="dark" style="--bs-body-bg: #143454;">
+<body lang="en" data-bs-theme="dark">
 
-            <div class="container">
-                <div class="row">
-
-                    <div class="col mt-4 text-center">
-                        <label for="PlayerSearch" class="form-label" style="font-size:25px;"><b>Player Search</b></label>
-                    </div>
-
+            <div class="container rounded-3 border shadow-lg mb-4">
+                <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 text-center">
+                  <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                    <h1 class="display-2 fw-bold lh-1 text-body-emphasis">Welcome to Stat Champ!</h1>
+                    <p class="lead">Your #1 Fantasy Basketball App! View player stats, build a team, and join a league to find out if you have what it takes to become a stats champion!</p>
+                      <a href="/auth/sign-up" class="btn btn-primary btn-lg">
+                                Sign Up
+                      </a>                  </div>
+                  <div class="col-auto mb-4">
+                      <img class="border rounded-3 img-fluid" src="/static/logo2.png" alt="" width="340" height="auto">
+                  </div>
                 </div>
+              </div>
 
-                <form autocomplete="off">
-                    <div class="row mb-2 mt-2 gx-2">
-
-                        <div class="offset-4 col-4 text-center">
-                                <input class="form-control text-center" id="PlayerSearch" name="PlayerSearch" type="text" style="line-height: 25px;">
-                        </div>
-
-
-                        <div class="col">
-                                <input class="btn btn-lg fw-bold" type="submit" style="--bs-btn-bg: #eee; --bs-btn-color: #000; --bs-btn-border-color: #000; --bs-btn-hover-color: #000; --bs-btn-hover-bg: #7BCCEE; --bs-btn-line-height: 20px; ">
-                                </input>
-                        </div>
-
+            <div class="container rounded-3 border shadow-lg px-4 py-2 text-center" id="featured-3">
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                  <div class="feature col">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <img src="/static/logo.png" alt="Logo" width="60" height="60" class="rounded mx-auto">
                     </div>
-                </form>
+                    <h3 class="fs-2 text-body-emphasis fw-bold">Player Stats</h3>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                      <a href="#" class="btn btn-primary">
+                                Primary button
+                      </a>
+                  </div>
+                  <div class="feature col">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <img src="/static/logo.png" alt="Logo" width="60" height="60" class="rounded mx-auto">
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis fw-bold">Build Team</h3>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <a href="#" class="btn btn-primary">
+                                Primary button
+                      </a>
+                  </div>
+                  <div class="feature col">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <img src="/static/logo.png" alt="Logo" width="60" height="60" class="rounded mx-auto">
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis fw-bold">Create/Join League</h3>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                      <a href="#" class="btn btn-primary">
+                                Primary button
+                      </a>
+                  </div>
+                </div>
+              </div>
+
+
+            <div class ="container rounded-3 border shadow-lg mt-4 mb-4">
+                <div class="row">
+                    <div class="col mt-4 mb-2 text-center">
+                        <label for="pointsChart" style="font-size:35px;"><b>Season Leaders</b></label>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-6">
+
+                    <canvas id="pointsChart"></canvas>
+
+                        <script>
+                              const ctx = document.getElementById('pointsChart');
+                              const pointsNames = {{ top5points_names | safe}};
+                              const points = {{ top5points | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    pointsNames,
+                                  datasets: [{
+                                    label: 'Season Points Leaders',
+                                    data: points,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+
+                    <div class="col-6">
+
+                    <canvas id="blocksChart"></canvas>
+
+                        <script>
+                              const btx = document.getElementById('blocksChart');
+                              const blocksNames = {{ top5blocks_names | safe}};
+                              const blocks = {{ top5blocks | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(btx, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    blocksNames,
+                                  datasets: [{
+                                    label: 'Season Blocks Leaders',
+                                    data: blocks,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+                </div>
             </div>
 
-            <div class="container">
 
+            <div class="container rounded-3 border shadow-lg mt-4 mb-4">
                 <div class="row">
-                  <div class="col-12 mt-5 mx-auto table_outer">
+                    <div class="col mt-4 text-center">
+                        <label for="player_table" style="font-size:35px;"><b> Quick Player Search</b></label>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                  <div class="col-12 mt-4 mx-auto table_outer table-responsive">
                     <table class="table table-default table-striped table-hover" id="player_table">
                       <thead>
                       <tr>
@@ -47,7 +164,6 @@
                           <th scope="col" >Age</th>
                           <th scope="col" >Position</th>
                           <th scope="col" >Team</th>
-                          <th scope="col" >Points</th>
                       </tr>
                       </thead>
 
@@ -59,14 +175,13 @@
                               <td>{{ dataframe['age'].get(i) }}</td>
                               <td>{{ dataframe['positions'].get(i) }}</td>
                               <td>{{ dataframe['team'].get(i) }}</td>
-                              <td>{{ dataframe['points'].get(i) }}</td>
                           </tr>
 
                       {% endfor %}
                       </tbody>
-
                     </table>
                   </div>
+
                 </div>
             </div>
 
