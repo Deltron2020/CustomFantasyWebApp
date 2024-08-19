@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request, flash
+from FA_Authorize.sql import insert_user_sql
 
 auth = Blueprint('auth',__name__)
 
@@ -21,6 +22,7 @@ def sign_up():
         dob = request.form.get('dob')
         promo = request.form.get('promo')
 
-        #data = request.form
+        #print(request.form)
+        insert_user_sql(username, email, password1, dob, promo)
 
-    return render_template('FA_Signup.html')
+    return render_template('old/old/FA_Signup.html')

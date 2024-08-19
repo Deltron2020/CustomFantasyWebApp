@@ -6,11 +6,21 @@ from app import create_app
 app = create_app()
 
 #stats = client.players_advanced_season_totals(season_end_year=2024)
-stats = client.players_season_totals(season_end_year=2024)
+try:
+    stats = client.players_season_totals(season_end_year=2024)
+except:
+    stats = {}
+    print('connection to stats failed')
+
+
 
 df = pd.DataFrame.from_dict(stats)
+
 #df.insert(2,"name_lower", df['name'].str.lower(), True)
 #print(df.columns)
+
+#df.to_csv('C:/Users/tyler/Projects/CustomFantasyWebApp/players.csv', index=False)
+
 
 @app.route("/")
 def web_app_home():
