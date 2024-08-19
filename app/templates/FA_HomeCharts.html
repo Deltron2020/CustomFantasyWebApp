@@ -1,0 +1,302 @@
+            <div class ="container rounded-3 border shadow-lg mt-4 mb-4">
+
+                <div class="row">
+                    <div class="col mt-4 mb-2 text-center">
+                        <label for="pointsChart" style="font-size:35px; font-weight: 700;">Season Leaders</label>
+                    </div>
+                </div>
+
+                <div class="row mb-2 pb-3 border-bottom border-black">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <canvas id="pointsChart"></canvas>
+
+                        <script>
+                              const pointsChart = document.getElementById('pointsChart');
+                              const pointsNames = {{ top5points_names | safe}};
+                              const points = {{ top5points | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(pointsChart, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    pointsNames,
+                                  datasets: [{
+                                    label: 'Points Leaders',
+                                    data: points,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <canvas id="assistsChart"></canvas>
+
+                        <script>
+                              const assistsChart = document.getElementById('assistsChart');
+                              const assistsNames = {{ top5assists_names | safe}};
+                              const assists = {{ top5assists | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(assistsChart, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    assistsNames,
+                                  datasets: [{
+                                    label: 'Assists Leaders',
+                                    data: assists,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+
+                </div>
+
+                <div class="row mb-2 pb-3 border-bottom border-black">
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <canvas id="blocksChart"></canvas>
+
+                        <script>
+                              const blocksChart = document.getElementById('blocksChart');
+                              const blocksNames = {{ top5blocks_names | safe}};
+                              const blocks = {{ top5blocks | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(blocksChart, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    blocksNames,
+                                  datasets: [{
+                                    label: 'Blocks Leaders',
+                                    data: blocks,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <canvas id="stealsChart"></canvas>
+
+                        <script>
+                              const stealsChart = document.getElementById('stealsChart');
+                              const stealsNames = {{ top5steals_names | safe}};
+                              const steals = {{ top5steals | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(stealsChart, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    stealsNames,
+                                  datasets: [{
+                                    label: 'Steals Leaders',
+                                    data: steals,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="row mb-2 pb-3 border-bottom border-black">
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <canvas id="offReboundsChart"></canvas>
+
+                        <script>
+                              const offReboundsChart = document.getElementById('offReboundsChart');
+                              const oreboundsNames = {{ top5o_rebounds_names | safe}};
+                              const orebounds = {{ top5o_rebounds | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(offReboundsChart, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    oreboundsNames,
+                                  datasets: [{
+                                    label: 'Offensive Rebounds Leaders',
+                                    data: orebounds,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <canvas id="defReboundsChart"></canvas>
+
+                        <script>
+                              const defReboundsChart = document.getElementById('defReboundsChart');
+                              const dreboundsNames = {{ top5d_rebounds_names | safe}};
+                              const drebounds = {{ top5d_rebounds | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(defReboundsChart, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    dreboundsNames,
+                                  datasets: [{
+                                    label: 'Defensive Rebounds Leaders',
+                                    data: drebounds,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="row mb-2 pb-3">
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <canvas id="turnoversChart"></canvas>
+
+                        <script>
+                              const turnoversChart = document.getElementById('turnoversChart');
+                              const turnoversNames = {{ top5turnovers_names | safe}};
+                              const turnovers = {{ top5turnovers | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(turnoversChart, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    turnoversNames,
+                                  datasets: [{
+                                    label: 'Turnovers Leaders',
+                                    data: turnovers,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <canvas id="foulsChart"></canvas>
+
+                        <script>
+                              const foulsChart = document.getElementById('foulsChart');
+                              const foulsNames = {{ top5fouls_names | safe}};
+                              const fouls = {{ top5fouls | safe}};
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(foulsChart, {
+                                type: 'bar',
+                                data: {
+                                  labels:
+                                    foulsNames,
+                                  datasets: [{
+                                    label: 'Fouls Leaders',
+                                    data: fouls,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+                </div>
+
+
+            </div>

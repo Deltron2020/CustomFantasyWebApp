@@ -18,133 +18,55 @@
 
 <body lang="en" data-bs-theme="dark">
 
-            <div class="container rounded-3 border shadow-lg mb-4">
-                <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 text-center">
-                  <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-                    <h2 class="fw-bold">Welcome to Stat Champ!</h2>
-                    <h4 class="fw-normal"> Your home for analyzing NBA player stats. </h4>
-                 </div>
-                  <div class="col d-md-block border-bottom">
-                      <img class="rounded-3 mb-2" src="/static/logo.png" alt="" width="200" height="auto">
-                  </div>
-                </div>
+    <div class="container rounded-3 border shadow-lg mb-4">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 text-center">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h2 class="fw-bold">Welcome to Stat Champ!</h2>
+                <h4 class="fw-normal"> Your home for analyzing NBA player stats. </h4>
+                <p class="fw-normal"> Find a player using the search below, check out the current NBA season stat leaders, or navigate the site using the links in the header. </p>
+            </div>
+            <div class="col d-md-block">
+                <img class="rounded-3 mb-2" src="/static/logo.png" alt="" width="200" height="auto">
+            </div>
+        </div>
 
-                <div class="row">
-                    <div class="col mt-4 text-center">
-                        <label for="player_table" style="font-size:35px; font-weight: 600;">Player Search</label>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col mt-4 text-center">
+                <label for="player_table" style="font-size:35px; font-weight: 700;">Player Search</label>
+            </div>
+        </div>
 
-                <div class="row mb-2">
-                  <div class="col-12 mt-4 mx-auto table_outer table-responsive">
-                    <table class="table table-default table-striped table-hover" id="player_table">
-                      <thead>
-                      <tr>
-                          <th scope="col" >Player Name</th>
-                          <th scope="col" >Age</th>
-                          <th scope="col" >Position</th>
-                          <th scope="col" >Team</th>
-                      </tr>
-                      </thead>
+        <div class="row mb-2">
+            <div class="col-12 mt-4 mx-auto table_outer table-responsive">
+                <table class="table table-default table-striped table-hover" id="player_table">
+                    <thead>
+                    <tr>
+                        <th scope="col" >Player Name</th>
+                        <th scope="col" >Age</th>
+                        <th scope="col" >Position</th>
+                        <th scope="col" >Team</th>
+                    </tr>
+                    </thead>
 
-                      <tbody>
-                      {% for i in dataframe['name'] %}
+                    <tbody>
+                    {% for i in player_search_table['name'] %}
 
-                          <tr class="table">
-                              <td>{{ dataframe['name'].get(i) }}</td>
-                              <td>{{ dataframe['age'].get(i) }}</td>
-                              <td>{{ dataframe['positions'].get(i) }}</td>
-                              <td>{{ dataframe['team'].get(i) }}</td>
-                          </tr>
+                    <tr class="table">
+                        <td>{{ player_search_table['name'].get(i) }}</td>
+                        <td>{{ player_search_table['age'].get(i) }}</td>
+                        <td>{{ player_search_table['position'].get(i) }}</td>
+                        <td>{{ player_search_table['team'].get(i) }}</td>
+                    </tr>
 
-                      {% endfor %}
-                      </tbody>
-                    </table>
-                  </div>
-
-                </div>
+                    {% endfor %}
+                    </tbody>
+                </table>
             </div>
 
+        </div>
+    </div>
 
-            <div class ="container rounded-3 border shadow-lg mt-4 mb-4">
-                <div class="row">
-                    <div class="col mt-4 mb-2 text-center">
-                        <label for="pointsChart" style="font-size:35px;"><b>Season Leaders</b></label>
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-6">
-
-                    <canvas id="pointsChart"></canvas>
-
-                        <script>
-                              const ctx = document.getElementById('pointsChart');
-                              const pointsNames = {{ top5points_names | safe}};
-                              const points = {{ top5points | safe}};
-                              Chart.defaults.color = '#FFF';
-
-                              new Chart(ctx, {
-                                type: 'bar',
-                                data: {
-                                  labels:
-                                    pointsNames,
-                                  datasets: [{
-                                    label: 'Season Points Leaders',
-                                    data: points,
-                                    borderWidth: 1
-                                  }]
-                                },
-                                options: {
-                                    indexAxis: 'y',
-                                    responsive: true,
-                                    maintainAspectRatio: false,
-                                  scales: {
-                                    x: {
-                                      beginAtZero: false
-                                    }
-                                  }
-                                }
-                              });
-                        </script>
-                    </div>
-
-                    <div class="col-6">
-
-                    <canvas id="blocksChart"></canvas>
-
-                        <script>
-                              const btx = document.getElementById('blocksChart');
-                              const blocksNames = {{ top5blocks_names | safe}};
-                              const blocks = {{ top5blocks | safe}};
-                              Chart.defaults.color = '#FFF';
-
-                              new Chart(btx, {
-                                type: 'bar',
-                                data: {
-                                  labels:
-                                    blocksNames,
-                                  datasets: [{
-                                    label: 'Season Blocks Leaders',
-                                    data: blocks,
-                                    borderWidth: 1
-                                  }]
-                                },
-                                options: {
-                                    indexAxis: 'y',
-                                    responsive: true,
-                                    maintainAspectRatio: false,
-                                  scales: {
-                                    x: {
-                                      beginAtZero: false
-                                    }
-                                  }
-                                }
-                              });
-                        </script>
-                    </div>
-                </div>
-            </div>
-
+    {% include 'FA_HomeCharts.html' %}
 
     <script>
       $(document).ready(function () {
