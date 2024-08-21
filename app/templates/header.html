@@ -2,10 +2,9 @@
     <header class="d-flex flex-wrap justify-content-center py-3">
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="/" class="nav-link" aria-current="true">Home</a></li>
+        <li class="nav-item"><a href="/" class="nav-link" aria-current="true">Search</a></li>
         <li class="nav-item"><a href="/teams" class="nav-link" aria-current="false">Teams</a></li>
-        <li class="nav-item"><a href="/test" class="nav-link" aria-current="false">FAQs</a></li>
-        <li class="nav-item"><a href="/test" class="nav-link" aria-current="false">About</a></li>
+        <li class="nav-item"><a href="/test" class="nav-link" aria-current="false">FAQ/About</a></li>
       </ul>
 
 
@@ -14,12 +13,14 @@
         // come back to do this for aria-current - setting active page to true
         var navContainer = document.getElementById("header");
         var navItems = navContainer.getElementsByClassName("nav-link");
+        var url = document.URL;
         var i = 0;
 
         // Loop through the items
         while (navItems[i]) {
 
-            if (navItems[i].href === document.URL) {
+          var navs = navItems[i].href;
+          if (url.match(navs)) {
               navItems[i].className = navItems[i].className.replace("nav-link", "nav-link active");
               }
             else {

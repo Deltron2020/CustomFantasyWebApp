@@ -52,3 +52,8 @@ def web_app_home():
                            top5d_rebounds=reboundsDefReboundsList, top5d_rebounds_names=dReboundsNamesList,
                            top5turnovers=turnoverTurnoverList, top5turnovers_names=turnoverNamesList,
                            top5fouls=foulsFoulsList, top5fouls_names=foulsNamesList)
+
+
+@views.route("/player/<name>")
+def web_app_player(name):
+    return render_template('FA_Player.html', name=name)

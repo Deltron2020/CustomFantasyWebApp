@@ -80,8 +80,10 @@
                return $(this).text();
             }).get();
 
-            alert("Your data is: " + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-            });
+            //alert("Your data is: " + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
+             window.open('/player/' + $.trim(tableData[0]) + '', '_blank');
+
+        });
     </script>
 
 
