@@ -18,7 +18,7 @@
 
 <body lang="en" data-bs-theme="dark">
 
-<div class="container text-center">
+<div class="container-fluid container-responsive text-center">
     <div class="row">
         <div class="col-3 border border-black">
             <img src="/static/player_icon.png" width="60" height="60">
@@ -29,37 +29,144 @@
     </div>
 
         <div class="row">
+            <label>Totals</label>
             <div class="col border border-black">
-                <p>1 of 3</p>
+                <label>Points</label>
+                <p>{{stats['points']}}</p>
             </div>
             <div class="col border border-black">
-                <p>1 of 3</p>
+                <label>Assists</label>
+                <p>{{stats['assists']}}</p>
             </div>
             <div class="col border border-black">
-                <p>1 of 3</p>
+                <label>Rebounds</label>
+                <p>{{stats['rebounds']}}</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col border border-black">
-                <p>1 of 3</p>
+                <label>Blocks</label>
+                <p>{{stats['blocks']}}</p>
             </div>
             <div class="col border border-black">
-                <p>1 of 3</p>
+                <label>Steals</label>
+                <p>{{stats['steals']}}</p>
             </div>
             <div class="col border border-black">
-                <p>1 of 3</p>
+                <label>Turnovers</label>
+                <p>{{stats['turnovers']}}</p>
+            </div>
+        </div>
+
+            <div class="row">
+                <label>Averages</label>
+            <div class="col border border-black">
+                <label>Points</label>
+                <p>{{stats['points_per_game']}}</p>
+            </div>
+            <div class="col border border-black">
+                <label>Assists</label>
+                <p>{{stats['assists_per_game']}}</p>
+            </div>
+            <div class="col border border-black">
+                <label>Rebounds</label>
+                <p>{{stats['rebounds_per_game']}}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col border border-black">
+                <label>Blocks</label>
+                <p>{{stats['blocks_per_game']}}</p>
+            </div>
+            <div class="col border border-black">
+                <label>Steals</label>
+                <p>{{stats['steals_per_game']}}</p>
+            </div>
+            <div class="col border border-black">
+                <label>Turnovers</label>
+                <p>{{stats['turnovers_per_game']}}</p>
             </div>
         </div>
 
 <div class="row">
 <div class="col d-md-block rounded-3 shadow-lg mb-2 mt-2">
-    <div class="d-grid gap-3" style="grid-template-columns: 1fr 2fr;">
+    <div class="d-grid gap-3">
       <div class="bg-body-tertiary border rounded-3">
-        <br><br><br><br><br><br><br><br><br><br>
-      </div>
+
+                    <canvas id="blocksChart"></canvas>
+
+                        <script>
+                              const blocksChart = document.getElementById('blocksChart');
+                              const blocksNames = ['PPG', 'APG', 'RPG', 'SPG', 'TPG'];
+                              var ppg = {{ stats['points_per_game'] | safe }};
+                              var apg = {{ stats['assists_per_game'] | safe }};
+                              var rpg = {{ stats['rebounds_per_game'] | safe }};
+                              var spg = {{ stats['steals_per_game'] | safe }};
+                              var tpg = {{ stats['turnovers_per_game'] | safe }};
+                              const blocks = [ppg, apg, rpg, spg, tpg];
+
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(blocksChart, {
+                                type: 'polarArea',
+                                data: {
+                                  labels:
+                                    blocksNames,
+                                  datasets: [{
+                                    label: 'Blocks Leaders',
+                                    data: blocks,
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: false
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
+                    </div>
+
       <div class="bg-body-tertiary border rounded-3">
-        <br><br><br><br><br><br><br><br><br><br>
+        <canvas id="linesChart"></canvas>
+
+                        <script>
+                              const linesChart = document.getElementById('linesChart');
+                              const linesNames = ['bob', 'bob', 'bob', 'bob', 'bob'];
+                              const lines = [3, 3, 3, 3, 3];
+                              Chart.defaults.color = '#FFF';
+
+                              new Chart(linesChart, {
+                                type: 'line',
+                                data: {
+                                  labels: ['5-25', '5-26', '5-27', '5-28', '5-29', '5-30', '5-31'],
+                                  datasets: [{
+                                    label: 'My First Dataset',
+                                    data: [65, 59, 80, 81, 56, 55, 40],
+                                    fill: false,
+                                    borderColor: 'rgb(75, 192, 192)',
+                                    tension: 0.1
+                                  }]
+                                },
+                                options: {
+                                    indexAxis: 'y',
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                  scales: {
+                                    x: {
+                                      beginAtZero: true
+                                    }
+                                  }
+                                }
+                              });
+                        </script>
       </div>
     </div>
   </div>

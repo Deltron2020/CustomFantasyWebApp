@@ -2,7 +2,6 @@ from basketball_reference_web_scraper import client
 import pandas as pd
 from flask import render_template, request
 from app import create_app
-from test import players_df
 
 app = create_app()
 

@@ -1,6 +1,7 @@
 from flask import render_template, Blueprint, request
-from app.player_selection import players_df
+from app.player_selection import players_df, player_stat_search
 from app.season_leaders import (points_leaders, blocks_leaders, assists_leaders, steals_leaders, o_rebounds_leaders, d_rebounds_leaders, turnover_leaders, fouls_leaders)
+
 
 views = Blueprint('views',__name__)
 player_search_df = players_df().to_dict()
@@ -56,4 +57,4 @@ def web_app_home():
 
 @views.route("/player/<name>")
 def web_app_player(name):
-    return render_template('FA_Player.html', name=name)
+    return render_template('FA_Player.html', name=name, stats=player_stat_search(name))
