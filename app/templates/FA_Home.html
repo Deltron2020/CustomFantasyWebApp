@@ -6,9 +6,9 @@
     <title>Stat Champ</title>
 
     <style>
-        .container-fluid,
-        .container {
+        .bg {
         background-color: #143454;
+            background-image: var(--bs-gradient);
     }
     </style>
 
@@ -16,20 +16,24 @@
 
 </head>
 
-<body lang="en" data-bs-theme="dark">
+<body lang="en" class="bg">
 
-    <div class="container rounded-3 border shadow-lg mb-4">
-        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 text-center">
-            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+    <div class="container-fluid mb-4">
+        <div class="row pb-0 pe-lg-0 pt-lg-5 text-center">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3 border">
                 <h2 class="fw-bold">Welcome to Stat Champ!</h2>
                 <h4 class="fw-normal"> Your home for analyzing NBA player stats. </h4>
                 <p class="fw-normal"> Find a player using the search below, check out the current NBA season stat leaders, or navigate the site using the links in the header. </p>
             </div>
-            <div class="col d-md-block">
-                <img class="rounded-3 mb-2" src="/static/logo.png" alt="" width="200" height="auto">
-            </div>
-        </div>
+            <div class="col border">
 
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid shadow-lg mb-4">
         <div class="row">
             <div class="col mt-4 text-center">
                 <label for="player_table" style="font-size:35px; font-weight: 700;">Player Search</label>

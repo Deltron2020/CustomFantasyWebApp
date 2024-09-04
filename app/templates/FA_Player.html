@@ -18,13 +18,16 @@
 
 <body lang="en" data-bs-theme="dark">
 
-<div class="container-fluid container-responsive text-center">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-3 border border-black">
+        <div class="col-4">
             <img src="/static/player_icon.png" width="60" height="60">
         </div>
-        <div class="col border border-black">
+        <div class="col">
             <H1>{{name}}</H1>
+            <p>Age: {{stats['age']}}</p>
+            <p>Position: {{stats['position']}}</p>
+            <p>Team: {{stats['team']}}</p>
         </div>
     </div>
 
