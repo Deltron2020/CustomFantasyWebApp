@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0bc5a2a-7ffb-432b-baeb-b986e5c1415c" name="Changes" comment="updates to player page">
+    <list default="true" id="d0bc5a2a-7ffb-432b-baeb-b986e5c1415c" name="Changes" comment="new logo, fixed header, player page improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/logo_url.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/FA_Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/FA_Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/FA_HomeCharts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/FA_HomeCharts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/FA_Player.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/FA_Player.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -263,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725255671875</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="new logo, fixed header, player page improvements">
+      <option name="closed" value="true" />
+      <created>1725445945198</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1725445945198</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,13 +288,14 @@
     <MESSAGE value="major changes - added login page, redesign home page, working on routes and backend" />
     <MESSAGE value="modified player page layout" />
     <MESSAGE value="updates to player page" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates to player page" />
+    <MESSAGE value="new logo, fixed header, player page improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="new logo, fixed header, player page improvements" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CustomFantasyWebApp$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1724069453910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CustomFantasyWebApp$db_connect.coverage" NAME="db_connect Coverage Results" MODIFIED="1713695198279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CustomFantasyWebApp$test.coverage" NAME="test Coverage Results" MODIFIED="1724091817160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CustomFantasyWebApp$app.coverage" NAME="app Coverage Results" MODIFIED="1725444663205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CustomFantasyWebApp$app.coverage" NAME="app Coverage Results" MODIFIED="1725452499098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CustomFantasyWebApp$season_leaders.coverage" NAME="season_leaders Coverage Results" MODIFIED="1724091637113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/CustomFantasyWebApp$auth.coverage" NAME="auth Coverage Results" MODIFIED="1723953459566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
