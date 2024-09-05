@@ -10,38 +10,18 @@
         background-color: rgba(20,22,84,1);
     }
 
-    .fade-img:after {
-      content:"";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-image: linear-gradient(to bottom, rgba(20,22,84,0) 0%, rgba(20,22,84,1) 100%);
-      height: 65%;
+        .btn {
+            background-color: rgba(20,22,84,1);
+            opacity: .80;
+            font-weight: 500;
     }
 
-    .image-container {
-    position: relative;
-    color: white;
+        .bg-image {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
     }
 
-    /* Image */
-    .image-container img {
-        width: 100%;
-        height: auto;
-        opacity: 0.5;
-    }
-
-    /* Text overlay */
-    .overlay-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(117, 117, 117, 0.8); /* Optional: background color for better readability */
-        padding: 10px;
-        border-radius: 5px;
-    }
     </style>
 
     {% include 'header.html' %}
@@ -50,15 +30,34 @@
 
 <body lang="en" class="bg text-white">
 
-    <div class="image-container mb-2">
-                <div class="fade-img">
-                  <img src="/static/court_chart_bg.png" alt="Image with fade effect">
-                            <div class="overlay-text">
-                                <h1 style="font-size: 20px; font-weight: 900;">Welcome to Stat Champ!</h1>
-                                <p class="fw-normal"> Your home for analyzing NBA player stats! Find a player using the search below, check out the current NBA season stat leaders, or navigate the site using the links in the header. </p>
-
-                            </div>
+    <div
+      class="bg-image"
+      style="
+        background-image: url('/static/court_chart_bg.png');
+        height: 60vh;
+      ">
+        <div class="container-fluid">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="row">
+                        <div class="col mt-2 text-center">
+                            <h1 class="fw-bold mb-2 border-bottom border-white">Welcome to Stat Champ!</h1>
+                            <h4 class="fw-bold mb-2">Your home for analyzing NBA player stats.</h4>
+                            <p class="fw-bold mb-3">Use the search below to locate a player and then select the player to view their profile.</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="d-grid gap-3 mx-auto col-lg-4 col-md-4 col-sm-2 mt-4 text-center">
+                    <a href="/" class="btn btn-secondary btn-lg">NBA Teams</a>
+                    <a href="/" class="btn btn-secondary btn-lg">NBA Stat Leaders</a>
+                    <a href="/" class="btn btn-secondary btn-lg">FAQ/About</a>
+                </div>
+            </div>
+        </div>
     </div>
 
 
