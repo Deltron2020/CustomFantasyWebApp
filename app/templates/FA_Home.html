@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="d-grid gap-3 mx-auto col-lg-4 col-md-4 col-sm-2 mt-4 text-center">
                     <a href="/" class="btn btn-secondary btn-lg">NBA Teams</a>
-                    <a href="/" class="btn btn-secondary btn-lg">NBA Stat Leaders</a>
+                    <a href="/stat_leaders" class="btn btn-secondary btn-lg">NBA Stat Leaders</a>
                     <a href="/" class="btn btn-secondary btn-lg">FAQ/About</a>
                 </div>
             </div>
@@ -98,8 +98,6 @@
         </div>
     </div>
 
-    {% include 'FA_HomeCharts.html' %}
-
     <script>
       $(document).ready(function () {
         $('#player_table').DataTable();
@@ -113,11 +111,10 @@
             }).get();
 
             //alert("Your data is: " + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-             window.open('/player/' + $.trim(tableData[0]) + '', '_blank');
+             window.open('/player/' + $.trim(tableData[0]) + '', '_self');
 
         });
     </script>
-
 
     {% include 'footer.html' %}
 

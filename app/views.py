@@ -4,10 +4,16 @@ from app.season_leaders import (points_leaders, blocks_leaders, assists_leaders,
 
 
 views = Blueprint('views',__name__)
-player_search_df = players_df().to_dict()
 
 
 @views.route("/")
+def home():
+    player_search_df = players_df().to_dict()
+    return render_template('FA_Home.html',player_search_table=player_search_df)
+
+
+
+@views.route("/stat_leaders")
 def web_app_home():
 
     top5points = points_leaders()
@@ -43,8 +49,7 @@ def web_app_home():
     foulsFoulsList = list(top5fouls['personal_fouls'].values())
 
 
-    return render_template('FA_Home.html',
-                           player_search_table=player_search_df,
+    return render_template('FA_HomeCharts.html',
                            top5points=pointsPointsList, top5points_names=pointsNamesList,
                            top5blocks=blocksBlocksList, top5blocks_names=blocksNamesList,
                            top5assists=assistsAssistsList, top5assists_names=assistsNamesList,

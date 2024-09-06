@@ -1,7 +1,27 @@
-            <div class ="container-fluid mt-4 mb-4">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'bootstrap.html' %}
+
+    <title>Stat Champ</title>
+
+    <style>
+        .bg {
+        background-color: rgba(20,22,84,1);
+    }
+    </style>
+
+</head>
+
+<body lang="en" class="bg text-white">
+
+    {% include 'header.html' %}
+
+
+<div class ="container-fluid mt-4 mb-4">
 
                 <div class="row">
-                    <div class="col mt-4 mb-2 text-center">
+                    <div class="col mb-4 text-center">
                         <label for="pointsChart" style="font-size:35px; font-weight: 700;">Season Leaders</label>
                     </div>
                 </div>
@@ -298,5 +318,10 @@
                     </div>
                 </div>
 
-
             </div>
+
+{% include 'footer.html' %}
+
+</body>
+
+</html>
