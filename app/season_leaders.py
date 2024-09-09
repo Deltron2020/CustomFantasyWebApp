@@ -1,5 +1,7 @@
 from app.player_totals_dataframe import get_player_totals_dataframe
-df = get_player_totals_dataframe(2024)
+dict = get_player_totals_dataframe(2024)
+
+df = dict[2024]
 
 def points_leaders():
    top5points = (df

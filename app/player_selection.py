@@ -1,6 +1,8 @@
 from app.player_totals_dataframe import get_player_totals_dataframe
-df = get_player_totals_dataframe(2024)
+#df = get_player_totals_dataframe(2024)
+dict = get_player_totals_dataframe(2024)
 
+df = dict[2024]
 def label_position(row):
    if 'CENTER' in row['positions']:
       return 'C'
@@ -71,6 +73,6 @@ def player_stat_search(player_name):
    total_stats['steals_per_game'] = spg
    total_stats['turnovers_per_game'] = tpg
 
-   print(total_stats)
+   #print(total_stats)
 
    return total_stats
