@@ -19,11 +19,11 @@
 <body lang="en" data-bs-theme="dark">
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row align-items-center">
         <div class="col-4">
-            <img src="/static/player_icon.png" width="60" height="60">
+            <img class="img-fluid" src="/static/player_icon.png" width="auto" height="auto" alt="player_icon">
         </div>
-        <div class="col">
+        <div class="col mt-2">
             <H1>{{name}}</H1>
             <p>Age: {{stats['age']}}</p>
             <p>Position: {{stats['position']}}</p>
@@ -113,15 +113,22 @@
                               Chart.defaults.color = '#FFF';
 
                               new Chart(blocksChart, {
-                                type: 'polarArea',
+                                type: 'bar',
                                 data: {
                                   labels:
                                     blocksNames,
-                                  datasets: [{
-                                    label: 'Blocks Leaders',
+                                  datasets: [
+                                      {
+                                    label: '2024',
                                     data: blocks,
                                     borderWidth: 1
-                                  }]
+                                  },
+                                      {
+                                    label: '2023',
+                                    data: blocks,
+                                    borderWidth: 1
+                                  }
+                                  ]
                                 },
                                 options: {
                                     indexAxis: 'y',
