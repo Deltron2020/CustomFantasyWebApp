@@ -3,7 +3,9 @@ year = int(2024)
 
 dict = get_player_totals_dataframe(year)
 df = dict[year]
-py_df = dict[year-1]
+#py_df = dict[year-1]
+
+
 
 def label_position(row):
    if 'CENTER' in row['positions']:
@@ -32,7 +34,7 @@ def update_dataframe(dataframe):
 
 
 update_dataframe(df)
-update_dataframe(py_df)
+#update_dataframe(py_df)
 
 def players_df():
    max_id = (

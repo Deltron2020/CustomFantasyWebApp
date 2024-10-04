@@ -64,5 +64,4 @@ def web_app_home():
 def web_app_player(name):
     return render_template('FA_Player.html',
                            name=name,
-                           stats=player_stat_search(name),
-                           py_stats=py_player_stat_search(name))
+                           stats=player_stat_search(name))#,py_stats=py_player_stat_search(name))

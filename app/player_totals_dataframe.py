@@ -4,13 +4,15 @@ import pandas as pd
 def get_player_totals_dataframe(year: int):
     try:
         #advstats = client.players_advanced_season_totals(season_end_year=year)
-        stats = client.players_season_totals(season_end_year=year)
-        prior_stats = client.players_season_totals(season_end_year=year-1)
+        #stats = client.players_season_totals(season_end_year=year)
+        #prior_stats = client.players_season_totals(season_end_year=year-1)
 
-        df = pd.DataFrame.from_dict(stats)
-        py_df = pd.DataFrame.from_dict(prior_stats)
+        #df = pd.DataFrame.from_dict(stats)
+        #py_df = pd.DataFrame.from_dict(prior_stats)
 
-        stat_dict = {year: df, year-1: py_df}
+        df = pd.read_csv("players.csv", delimiter="," )
+
+        stat_dict = {year: df}#, year-1: py_df}
 
     except Exception as e:
         print(e)
